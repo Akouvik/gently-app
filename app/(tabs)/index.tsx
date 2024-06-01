@@ -13,8 +13,7 @@ function HomeScreen() {
   const navigation = useNavigation();
 
   const handlePress = () => {
-    // navigation.navigate('Signup');
-    console.log('hey');
+    navigation.navigate('signup');
   };
 
   return (

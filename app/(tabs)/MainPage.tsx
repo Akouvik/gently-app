@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 
 function MainPage() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.time}>9:41</Text>
         <View style={styles.imageContainer}>
@@ -29,7 +29,13 @@ function MainPage() {
       </View>
       <View style={styles.content}>
         <View style={styles.contentHeader}>
-          <Image source={{ uri: '...' }} style={styles.headerImage} />
+          <Image
+            // source={{ uri: '...' }}
+            source={{
+              uri: 'https://cdn.builder.io/api/v1/image/assets/TEMP/abd87139193e2c681f470fc76d77658c5c65d9ef1663d2b299df2961f3ccb20a?',
+            }}
+            style={styles.headerImage}
+          />
           <View style={styles.avatar}>
             <Text>M</Text>
           </View>
@@ -40,7 +46,7 @@ function MainPage() {
           </Text>
         </View>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>
+          <Text style={styles.sectionSubTitle}>
             Part 1 of me healing from grief
           </Text>
         </View>
@@ -49,9 +55,52 @@ function MainPage() {
             Embracing grief: My journey of healing and growth
           </Text>
         </View>
-        {/* Repeat these views for each section */}
       </View>
-    </View>
+      <View style={styles.section}>
+        <View style={styles.sectionNumber}>
+          <Text style={styles.sectionNumberText}>1</Text>
+        </View>
+        <View style={styles.sectionContent}>
+          <Text style={styles.sectionTitle}>
+            Understanding and Nurturing {'\n'} My Nervous System
+          </Text>
+          <View style={styles.sectionImage} />
+          <View style={styles.sectionFooter}>
+            <Text style={styles.sectionFooterText}>Read</Text>
+            <View style={styles.divider} />
+            <Text style={styles.sectionFooterText}>4 min</Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.section}>
+        <View style={styles.sectionNumber}>
+          <Text style={styles.sectionNumberText}>2</Text>
+        </View>
+        <View style={styles.sectionContent}>
+          <Text style={styles.sectionTitle}>Creating your save space</Text>
+          <View style={styles.sectionImage} />
+          <View style={styles.sectionFooter}>
+            <Text style={styles.sectionFooterText}>Exercise</Text>
+            <View style={styles.divider} />
+            <Text style={styles.sectionFooterText}>4 min</Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.section}>
+        <View style={styles.sectionNumber}>
+          <Text style={styles.sectionNumberText}>3</Text>
+        </View>
+        <View style={styles.sectionContent}>
+          <Text style={styles.sectionTitle}>What the grief after loss is?</Text>
+          <View style={styles.sectionImage} />
+          <View style={styles.sectionFooter}>
+            <Text style={styles.sectionFooterText}>Read</Text>
+            <View style={styles.divider} />
+            <Text style={styles.sectionFooterText}>4 min</Text>
+          </View>
+        </View>
+      </View>
+    </ScrollView>
   );
 }
 
@@ -110,8 +159,8 @@ const styles = StyleSheet.create({
   },
   greeting: {
     marginTop: 7,
-    fontSize: 20,
-    fontWeight: '600',
+    fontSize: 34,
+    fontWeight: '900',
     lineHeight: 28,
     color: '#7E5AF5',
   },
@@ -127,6 +176,59 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     lineHeight: 28,
     color: '#7E5AF5',
+  },
+  sectionSubTitle: {
+    lineHeight: 28,
+    color: 'gray',
+  },
+  section: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: 12,
+  },
+  sectionNumber: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 28,
+    height: 28,
+    backgroundColor: '#2d3748',
+    borderRadius: 14,
+  },
+  sectionNumberText: {
+    fontSize: 16,
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+  sectionContent: {
+    flex: 1,
+    marginLeft: 10,
+  },
+  sectionImage: {
+    marginTop: 12,
+    backgroundColor: '#cbd5e0',
+    width: '100%',
+    aspectRatio: 1.41, // adjust aspect ratio as needed
+  },
+  sectionImagePlaceholder: {
+    marginTop: 12,
+    backgroundColor: '#cbd5e0',
+    width: 166,
+    aspectRatio: 1.41, // adjust aspect ratio as needed
+  },
+  sectionFooter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  sectionFooterText: {
+    fontSize: 16,
+    color: '#4a5568',
+  },
+  divider: {
+    width: 1,
+    height: 14,
+    backgroundColor: '#cbd5e0',
+    marginHorizontal: 7,
   },
 });
 

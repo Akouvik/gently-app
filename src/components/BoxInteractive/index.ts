@@ -1,2 +1,0 @@
-export {BoxInteractive} from './BoxInteractive';
-

@@ -34,7 +34,7 @@ const Signup = () => {
         keyboardType="email-address"
       />
       <TouchableOpacity style={styles.button} onPress={handleSignup}>
-        <Text style={styles.buttonText}>Signup</Text>
+        <Text style={styles.buttonText}>Signup?</Text>
       </TouchableOpacity>
     </View>
   );
