@@ -29,6 +29,9 @@ export default function TabTwoScreen() {
           <ThemedText type="defaultSemiBold">
             app/Components/Signup.tsx
           </ThemedText>
+          <ThemedText type="defaultSemiBold">
+            app/Components/ForgotPassword.tsx
+          </ThemedText>
           <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
         </ThemedText>
         <ThemedText>

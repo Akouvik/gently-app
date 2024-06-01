@@ -158,9 +158,8 @@ const styles = StyleSheet.create({
   button: {},
   buttonText: {
     fontSize: 16,
-    fontWeight: '600',
+    // fontWeight: '600',
     color: 'white',
-    backgroundColor: '#44337A',
   },
 });
 

@@ -100,6 +100,20 @@ function MainPage() {
           </View>
         </View>
       </View>
+      <View style={styles.section}>
+        <View style={styles.sectionNumber}>
+          <Text style={styles.sectionNumberText}>4</Text>
+        </View>
+        <View style={styles.sectionContent}>
+          <Text style={styles.sectionTitle}>Heal faster with our help</Text>
+          <View style={styles.sectionImage} />
+          <View style={styles.sectionFooter}>
+            <Text style={styles.sectionFooterText}>Read</Text>
+            <View style={styles.divider} />
+            <Text style={styles.sectionFooterText}>4 min</Text>
+          </View>
+        </View>
+      </View>
     </ScrollView>
   );
 }
@@ -168,9 +182,7 @@ const styles = StyleSheet.create({
     color: '#7E5AF5',
     fontWeight: '600',
   },
-  section: {
-    marginTop: 12,
-  },
+
   sectionTitle: {
     fontSize: 20,
     fontWeight: '600',
@@ -205,9 +217,10 @@ const styles = StyleSheet.create({
   },
   sectionImage: {
     marginTop: 12,
-    backgroundColor: '#cbd5e0',
+    backgroundColor: '#f1e6ee',
     width: '100%',
     aspectRatio: 1.41, // adjust aspect ratio as needed
+    borderRadius: 50,
   },
   sectionImagePlaceholder: {
     marginTop: 12,

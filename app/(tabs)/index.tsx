@@ -12,13 +12,15 @@ import { useNavigation } from '@react-navigation/native';
 function HomeScreen() {
   const navigation = useNavigation();
 
-  const handlePress = () => {
-    navigation.navigate('signup');
+  const handlePress = (type: string) => {
+    return type == 'signup'
+      ? navigation.navigate('signup')
+      : navigation.navigate('forgotpassword');
   };
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handlePress}>
+      <TouchableOpacity onPress={() => handlePress('signup')}>
         <View style={styles.buttonSignup}>
           <Text style={styles.buttonTextSignup}>Signup</Text>
         </View>
@@ -92,7 +94,12 @@ function HomeScreen() {
         <View style={styles.button}>
           <Text style={styles.buttonText}>Enter my program</Text>
         </View>
-        <Text style={styles.forgotPassword}>I forgot my password</Text>
+        <Text
+          style={styles.forgotPassword}
+          onPress={() => handlePress('forgot')}
+        >
+          I forgot my password
+        </Text>
         <View style={styles.privacyContainer}>
           <Text style={styles.privacyText}>
             Your privacy is sacred to us. Your email is only used for program

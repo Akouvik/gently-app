@@ -4,7 +4,7 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import Signup from '../Components/Signup';
-
+import ForgotPassword from '../Components/ForgotPassword';
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -51,6 +51,18 @@ export default function TabLayout() {
           ),
         }}
       />
+      {/* <Tabs.Screen
+        name="forgotpassword"
+        options={{
+          title: 'forgotpassword',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'code-slash' : 'code-slash-outline'}
+              color={color}
+            />
+          ),
+        }}
+      /> */}
     </Tabs>
   );
 }
