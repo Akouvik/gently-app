@@ -62,9 +62,13 @@ function Articles() {
         </View>
         <View style={styles.sectionContent}>
           <Text style={styles.sectionTitle}>
-            Understanding and Nurturing {'\n'} My Nervous System
+            Understanding and Nurturing your nervous system
           </Text>
-          <View style={styles.sectionImage} />
+          <View style={styles.sectionImage}>
+            <Image source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/3c0e0c0652b116bd9234ff55d4e6a57adbf25ed3c54e2094ff44dcc34d65bd6e?apiKey=620ab0c43af74ff19e2ae783c9a0f807&",
+            }} style={styles.overlayImage}/>
+          </View>
           <View style={styles.sectionFooter}>
             <Text style={styles.sectionFooterText}>Read</Text>
             <View style={styles.divider} />
@@ -78,7 +82,11 @@ function Articles() {
         </View>
         <View style={styles.sectionContent}>
           <Text style={styles.sectionTitle}>Creating your save space</Text>
-          <View style={styles.sectionImage} />
+          <View style={styles.sectionImage}>
+            <Image source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4c199fb3108a6b80e2bdac9e21e9d9ec83711b67e7f9ae267c65b49caa42f21a?apiKey=620ab0c43af74ff19e2ae783c9a0f807&",
+      }} style={styles.overlayImage}/>
+          </View>
           <View style={styles.sectionFooter}>
             <Text style={styles.sectionFooterText}>Exercise</Text>
             <View style={styles.divider} />
@@ -91,8 +99,12 @@ function Articles() {
           <Text style={styles.sectionNumberText}>3</Text>
         </View>
         <View style={styles.sectionContent}>
-          <Text style={styles.sectionTitle}>What the grief after loss is?</Text>
-          <View style={styles.sectionImage} />
+          <Text style={styles.sectionTitle}>What is grief after loss like?</Text>
+          <View style={styles.sectionImage}>
+            <Image source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/40090398879827d3f89b48dc01a2c63ff9a9360a595cc386c4c0d5baccb844fa?apiKey=620ab0c43af74ff19e2ae783c9a0f807&",
+            }} style={styles.overlayImage}/>
+          </View>
           <View style={styles.sectionFooter}>
             <Text style={styles.sectionFooterText}>Read</Text>
             <View style={styles.divider} />
@@ -106,7 +118,11 @@ function Articles() {
         </View>
         <View style={styles.sectionContent}>
           <Text style={styles.sectionTitle}>Heal faster with our help</Text>
-          <View style={styles.sectionImage} />
+          <View style={styles.sectionImage}>
+            <Image source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/2272c1273e7732083fe17090b236cd8e96aab3bfb0576f90d35a0cbf922ac148?apiKey=620ab0c43af74ff19e2ae783c9a0f807&",
+            }}style={styles.overlayImage}/>
+          </View>
           <View style={styles.sectionFooter}>
             <Text style={styles.sectionFooterText}>Read</Text>
             <View style={styles.divider} />
@@ -138,7 +154,7 @@ const styles = StyleSheet.create({
   },
   time: {
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: '400',
     textAlign: 'center',
     color: '#222',
   },
@@ -174,24 +190,31 @@ const styles = StyleSheet.create({
   greeting: {
     marginTop: 7,
     fontSize: 34,
-    fontWeight: '900',
+    fontWeight: '400',
     lineHeight: 28,
     color: '#7E5AF5',
+    fontFamily: 'sourceProLight',
   },
   userName: {
     color: '#7E5AF5',
     fontWeight: '600',
+    fontFamily: 'sourceProLight',
   },
 
   sectionTitle: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '300',
     lineHeight: 28,
-    color: '#7E5AF5',
+    color: '19122E',
+    fontFamily: 'sourceProLight',
+
   },
   sectionSubTitle: {
     lineHeight: 28,
     color: 'gray',
+    fontFamily: 'sourceProLight',
+    fontWeight: '200',
+    fontStyle: 'italic',
   },
   section: {
     flexDirection: 'row',
@@ -203,17 +226,30 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: 28,
     height: 28,
-    backgroundColor: '#2d3748',
+    backgroundColor: '#19122E',
     borderRadius: 14,
   },
   sectionNumberText: {
     fontSize: 16,
     color: '#fff',
     fontWeight: 'bold',
+    fontFamily: 'sourceProLight',
   },
   sectionContent: {
     flex: 1,
     marginLeft: 10,
+  },
+  overlayImage: {
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+    height: '80%',
+    width: '80%',
+    top: '50%',
+    left: '50%',
+    transform: [{ translateX: '-50%' }, { translateY: '-50%' }],
+    resizeMode: 'cover',
+    borderRadius: 40,
   },
   sectionImage: {
     marginTop: 12,
@@ -236,6 +272,7 @@ const styles = StyleSheet.create({
   sectionFooterText: {
     fontSize: 16,
     color: '#4a5568',
+    fontFamily: 'sourcePro'
   },
   divider: {
     width: 1,
