@@ -6,6 +6,8 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import Signup from '../Components/Signup';
 import ForgotPassword from '../Components/ForgotPassword';
 import Settings from './Settings';
+import SimpleLineIcons from '@expo/vector-icons/SimpleLineIcons';
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -45,14 +47,11 @@ export default function TabLayout() {
         options={{
           title: 'signup',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? 'code-slash' : 'checkmark-circle-outline'}
-              color={color}
-            />
+            <TabBarIcon name={focused ? 'sync' : 'sync'} color={color} />
           ),
         }}
       />
-        <Tabs.Screen
+      <Tabs.Screen
         name="MainPage"
         options={{
           title: 'MainPage',
@@ -64,7 +63,7 @@ export default function TabLayout() {
           ),
         }}
       />
-       <Tabs.Screen
+      <Tabs.Screen
         name="Community"
         options={{
           title: 'Community',

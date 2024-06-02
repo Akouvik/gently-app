@@ -130,10 +130,11 @@ const styles = StyleSheet.create({
   articleContainer: {
     marginTop: 14,
     width: '100%',
-    backgroundColor: '#774',
+    backgroundColor: '#19122E',
     borderRadius: 271 / 2,
     paddingHorizontal: 16,
     paddingVertical: 20,
+    justifyContent: 'center',
   },
   articleHeader: {
     flexDirection: 'row',
@@ -151,11 +152,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
+    textAlign: 'left',
   },
   articleContent: {
     fontSize: 18,
-    lineHeight: 26,
+    // lineHeight: 26,
     color: '#fff',
+    textAlign: 'left',
   },
 });
 
