@@ -36,7 +36,7 @@ function MyComponent() {
             Jens’ story of dealing with pregnancy loss denial
           </Text>
         </View>
-        <Text style={styles.articleContent}>
+        {/* <Text style={styles.articleContent}>
           {`My name is Eliza, 27, living in the US. Today, I'm opening up about a
           deeply personal and painful chapter in my life, in hopes that my words
           might resonate with others who've experienced something similar. I
@@ -87,7 +87,54 @@ function MyComponent() {
           I love my sister, and I want to be happy for her, but I'm still
           aching, still seeking closure, and the world seems to be moving
           forward without me.`}
-        </Text>
+        </Text> */}
+        <View style={styles.textContainer}>
+          <Text style={styles.articleContent}>
+            My name is Eliza, 27, living in the US. Today, I'm opening up about
+            a deeply personal and painful chapter in my life, in hopes that my
+            words might resonate with others who've experienced something
+            similar. I know my emotions are raw, and I'm still finding my way
+            through them.
+          </Text>
+
+          <Text style={styles.articleContent}>
+            Several months ago, I suffered the devastating loss of my ectopic
+            pregnancy at just 9 weeks. What followed was a series of painful
+            medical interventions: a D&C to determine the nature of the
+            pregnancy, treatment with methotrexate, and finally, a traumatic
+            surgery on June 10 when my fallopian tube ruptured. That loss,
+            though, was only the beginning of a journey filled with further
+            heartache. A mere month after this, my younger sister, who is two
+            years my junior, joyfully announced her pregnancy. I was still
+            enveloped in grief, and her news felt like a harsh contrast to the
+            emptiness that had become my constant companion.
+          </Text>
+
+          <Text style={styles.articleContent}>
+            Then came the conversation at her birthday dinner, one that haunts
+            me still. My mother casually brought up a name I had always
+            envisioned for my future child — a name that my family knew was
+            special to me. My sister even acknowledged it was something I had
+            claimed for myself. But then, my mother's words struck me like a
+            slap: "Well, she's having her baby first, so..." Tears welled in my
+            eyes, and I had to excuse myself to cry in the bathroom, feeling the
+            loss anew, as if the wound had just been inflicted. It was as if my
+            dream was being taken from me, and nobody seemed to grasp the depth
+            of my despair. Time has moved on, and now my sister's gender reveal
+            is looming large. The event should be a joyous occasion, but all I
+            feel is apprehension. Her baby's due date is unsettlingly close to
+            what mine would have been. Now even opening a calendar on my phone
+            could set me back for an hour. It feels like I’m living in a world
+            surrounded by triggers and reminders of my loss. How can I partake
+            in the celebration when my own dreams have crumbled to dust? My
+            boyfriend will stand by me at the gender reveal, but I'm torn about
+            attending. Is it selfish to contemplate missing my sister's special
+            moment? Can I muster the strength to be present? I'm adrift, caught
+            in a storm of conflicting emotions. I love my sister, and I want to
+            be happy for her, but I'm still aching, still seeking closure, and
+            the world seems to be moving forward without me.
+          </Text>
+        </View>
       </View>
     </ScrollView>
   );
@@ -153,12 +200,26 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     textAlign: 'left',
+    right: 220,
+  },
+  // articleContent: {
+  //   fontSize: 18,
+  //   // lineHeight: 26,
+  //   color: '#fff',
+  //   textAlign: 'left',
+  //   justifyContent: 'center',
+  //   margin: 'auto',
+  // },
+  textContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   articleContent: {
-    fontSize: 18,
-    // lineHeight: 26,
+    // fontSize: 18,
+    lineHeight: 26,
     color: '#fff',
-    textAlign: 'left',
+    textAlign: 'center', // To center align the text horizontally
   },
 });
 
