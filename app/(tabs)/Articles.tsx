@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 
-function MainPage() {
+function Articles() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -245,4 +245,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MainPage;
+export default Articles;

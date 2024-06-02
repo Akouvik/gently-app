@@ -5,6 +5,7 @@ import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import Signup from '../Components/Signup';
 import ForgotPassword from '../Components/ForgotPassword';
+import Settings from './Settings';
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
