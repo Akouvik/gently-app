@@ -34,7 +34,7 @@ export default function TabLayout() {
           title: 'Explore',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? 'code-slash' : 'code-slash-outline'}
+              name={focused ? 'code-slash' : 'aperture-outline'}
               color={color}
             />
           ),
@@ -46,24 +46,48 @@ export default function TabLayout() {
           title: 'signup',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? 'code-slash' : 'code-slash-outline'}
+              name={focused ? 'code-slash' : 'checkmark-circle-outline'}
               color={color}
             />
           ),
         }}
       />
-      {/* <Tabs.Screen
+        <Tabs.Screen
+        name="MainPage"
+        options={{
+          title: 'MainPage',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'code-slash' : 'albums-outline'}
+              color={color}
+            />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="Community"
+        options={{
+          title: 'Community',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'code-slash' : 'body-outline'}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="forgotpassword"
         options={{
           title: 'forgotpassword',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? 'code-slash' : 'code-slash-outline'}
+              name={focused ? 'code-slash' : 'bag-outline'}
               color={color}
             />
           ),
         }}
-      /> */}
+      />
     </Tabs>
   );
 }
