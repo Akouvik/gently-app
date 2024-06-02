@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Button,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -71,6 +72,16 @@ function HomeScreen() {
       </View>
       <View style={styles.content}>
         <Text style={styles.heading}>Welcome back to your gentle program</Text>
+        {/* <View style={styles.inputContainer}>
+          <Image
+            // source={require('./path/to/your/image.png')}
+            source={{
+              uri: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8bc38bc7bc33bb84b014ced038f17045095ef3d21b4cba28acfe7aa73cdba6a6?',
+            }}
+            style={styles.icon}
+          />
+          <Text style={styles.inputText}>marie-ann@gmail.com</Text>
+        </View>
         <View style={styles.inputContainer}>
           <Image
             // source={require('./path/to/your/image.png')}
@@ -80,7 +91,7 @@ function HomeScreen() {
             style={styles.icon}
           />
           <Text style={styles.inputText}>Please enter your password</Text>
-        </View>
+        </View> */}
         <View style={styles.inputContainer}>
           <Image
             // source={require('./path/to/your/image.png')}
@@ -91,9 +102,22 @@ function HomeScreen() {
           />
           <Text style={styles.inputText}>marie-ann@gmail.com</Text>
         </View>
-        <View style={styles.button}>
-          <Text style={styles.buttonText}>Enter my program</Text>
+        <View style={styles.inputContainer}>
+          <Image
+            // source={require('./path/to/your/image.png')}
+            source={{
+              uri: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8bc38bc7bc33bb84b014ced038f17045095ef3d21b4cba28acfe7aa73cdba6a6?',
+            }}
+            style={styles.icon}
+          />
+          <Text style={styles.inputText}>Please enter your password</Text>
         </View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('quiz')}
+        >
+          <Text style={styles.buttonText}>Enter my program</Text>
+        </TouchableOpacity>
         <Text
           style={styles.forgotPassword}
           onPress={() => handlePress('forgot')}

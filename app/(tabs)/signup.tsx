@@ -6,25 +6,20 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import { siginInUserWithEmailAndPassword } from '@/utils';
 
 const Signup = () => {
-  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     // Handle signup logic here
-    console.log('Signing up...');
+    const user = await siginInUserWithEmailAndPassword(email, password);
+    console.log('user ', user);
   };
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Name"
-        placeholderTextColor="#44337A"
-        value={name}
-        onChangeText={(text) => setName(text)}
-      />
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -32,6 +27,13 @@ const Signup = () => {
         value={email}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Name"
+        placeholderTextColor="#44337A"
+        value={password}
+        onChangeText={(text) => setPassword(text)}
       />
       <TouchableOpacity style={styles.button} onPress={handleSignup}>
         <Text style={styles.buttonText}>Signup?</Text>

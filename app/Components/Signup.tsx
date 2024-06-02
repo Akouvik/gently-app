@@ -6,14 +6,16 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import { siginInUserWithEmailAndPassword } from '@/utils';
 
 const Signup = () => {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     // Handle signup logic here
-    console.log('Signing up...');
+    console.log('Signing up2...', process.env.GOOGLE_AUTH_APPID);
+    const user = await siginInUserWithEmailAndPassword(email, password);
   };
 
   return (
@@ -22,8 +24,8 @@ const Signup = () => {
         style={styles.input}
         placeholder="Name"
         placeholderTextColor="#44337A"
-        value={name}
-        onChangeText={(text) => setName(text)}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
       />
       <TextInput
         style={styles.input}

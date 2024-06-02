@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { View, Image, Text, StyleSheet, ScrollView } from 'react-native';
 
 function MyComponent() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Image
           source={{
@@ -89,7 +89,7 @@ function MyComponent() {
           forward without me.`}
         </Text>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#333',
-    alignItems: 'center',
   },
   header: {
     flexDirection: 'row',
