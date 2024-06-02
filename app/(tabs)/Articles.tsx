@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
   sectionFooterText: {
     fontSize: 16,
     color: '#4a5568',
-    fontFamily: 'sourcePro'
+    fontFamily: 'sourceProLight'
   },
   divider: {
     width: 1,
